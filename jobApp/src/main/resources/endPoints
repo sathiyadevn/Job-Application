@@ -1,0 +1,16 @@
+
+Jobs
+
+GET /jobs -> Get al jobs
+GET /jobs/{id} -> Get job by id
+POST /jobs -> Create a new job (request body should contain job details)
+DELETE /jobs/{id} -> Delete a specific job by id
+PUT /jobs/{id} -> Update a specific job by id (request body should contain the updated job details)
+
+Jobs URL
+
+GET {base_url}/jobs
+GET {base_url}/jobs/{id}
+POST {base_url}/jobs
+DELETE {base_url}/jobs/{id}
+PUT {base_url}/jobs/{id}
