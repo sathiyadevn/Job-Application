@@ -1,9 +1,7 @@
 package com.dev43.jobapp.job;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.dev43.jobapp.company.Company;
+import jakarta.persistence.*;
 
 @Entity
 public class Job {
@@ -17,7 +15,18 @@ public class Job {
     private String maxSalary;
     private String location;
 
+    @ManyToOne
+    private Company companies;
+
     public Job() {
+    }
+
+    public Company getCompanies() {
+        return companies;
+    }
+
+    public void setCompanies(Company companies) {
+        this.companies = companies;
     }
 
     public Job(Long id, String title, String description, String minSalary, String maxSalary, String location) {
@@ -76,4 +85,5 @@ public class Job {
     public void setLocation(String location) {
         this.location = location;
     }
+
 }
