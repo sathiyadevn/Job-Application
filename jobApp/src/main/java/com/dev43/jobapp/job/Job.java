@@ -16,17 +16,17 @@ public class Job {
     private String location;
 
     @ManyToOne
-    private Company companies;
+    private Company company;
 
     public Job() {
     }
 
-    public Company getCompanies() {
-        return companies;
+    public Company getCompany() {
+        return company;
     }
 
-    public void setCompanies(Company companies) {
-        this.companies = companies;
+    public void setCompany(Company company) {
+        this.company = company;
     }
 
     public Job(Long id, String title, String description, String minSalary, String maxSalary, String location) {
